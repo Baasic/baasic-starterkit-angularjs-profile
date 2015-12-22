@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    # components.pager
+\*------------------------------------*/
+
+.pager {
+    width: 100%;
+}
+.pager>.link {
+    text-decoration: none;
+    color: #FFF;
+    padding: 0 0.5rem;
+}
