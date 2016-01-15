@@ -1,17 +1,17 @@
-angular.module('baasic.blog', [
-    'baasic.article'
+angular.module('baasic.profile', [
+    'baasic.userProfile'
 ]);
 
-angular.module('myBlog', [
+angular.module('profile', [
   'ui.router',
   'ngAnimate',
-  'btford.markdown',
-  'ngTagsInput',
+  //'btford.markdown',
+  //'ngTagsInput',
   'smoothScroll',
   'baasic.security',
   'baasic.membership',
   'baasic.dynamicResource',
-  'baasic.blog'
+  'baasic.userProfile'
 ])
 .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', 'baasicAppProvider', 'baasicAppConfigProvider',
     function config($locationProvider, $urlRouterProvider, $stateProvider, baasicAppProvider, baasicAppConfigProvider) {
@@ -55,32 +55,20 @@ angular.module('myBlog', [
             })
             .state('master.main.index', {
                 url: '?{page}',
-                templateUrl: 'templates/blog/blog-home.html'
+                templateUrl: 'templates/profile/profile-list.html'
             })
             .state('login', {
                 url: '/login',
                 templateUrl: 'templates/login.html',
                 controller: 'LoginCtrl'
             })
-            .state('master.new-blog-post', {
-                url: 'new-blog-post',
-                templateUrl: 'templates/blog/new-blog-post.html',
-                controller: 'NewBlogPostCtrl'
+            .state('master.profile-detail', {
+                url: 'profile/{profileId}',
+                templateUrl: 'templates/profile/profile-detail.html',
             })
-            .state('master.blog-detail', {
-                url: 'blog-post/{slug}',
-                templateUrl: 'templates/blog/blog-post.html',
-                controller: 'BlogPostCtrl'
-            })
-            .state('master.blog-edit', {
-                url: 'blog-post/edit/{slug}',
-                templateUrl: 'templates/blog/blog-post-edit.html',
-                controller: 'BlogPostEditCtrl'
-            })
-            .state('master.main.blog-search', {
-                url: 'blog-search?{search,tags}',
-                templateUrl: 'templates/blog/blog-search-results.html',
-                controller: 'BlogSearchResultsCtrl'
+            .state('master.main.profile-search', {
+                url: 'profile-search?{search}',
+                templateUrl: 'templates/profile/profile-search-results.html',
             })
             .state('404', {
                 templateUrl: 'templates/404.html'
@@ -88,10 +76,10 @@ angular.module('myBlog', [
     }
 ])
 .constant('recaptchaKey', '6LcmVwMTAAAAAKIBYc1dOrHBR9xZ8nDa-oTzidES')
-.controller('MainCtrl', ['$scope', '$state', '$rootScope', '$browser', 'baasicBlogService',
-    function MainCtrl($scope, $state, $rootScope, $browser, blogService) {
+.controller('MainCtrl', ['$scope', '$state', '$rootScope', '$browser',
+    function MainCtrl($scope, $state, $rootScope, $browser) {
         'use strict';
-        
+
         // http://stackoverflow.com/questions/8141718/javascript-need-to-do-a-right-trim
         var rightTrim = function (str, ch){
             if (!str){
@@ -104,30 +92,20 @@ angular.module('myBlog', [
                     str = str.substring(0, i + 1);
                     break;
                 }
-            } 
+            }
             return str ? str : '';
-        };       
-        
+        };
+
         $rootScope.baseHref = rightTrim($browser.baseHref.href, ('/'));
         if ($rootScope.baseHref === '/') {
             $rootScope.baseHref = '';
         }
-        
-        blogService.tags.find({
-            rpp: 10
-        })
-        .success(function (tagList) {
-            $scope.tags = tagList.item;
-        });
+
 
         $scope.setEmptyUser = function setEmptyUser() {
             $scope.$root.user = {
                 isAuthenticated: false
             };
-        };
-
-        $scope.newBlogPost = function newBlogPost() {
-            $state.go('master.new-blog-post');
         };
     }
 ])
@@ -143,9 +121,9 @@ angular.module('myBlog', [
 .controller('SearchCtrl', ['$scope', '$state', function ($scope, $state) {
     'use strict';
 
-    $scope.searchBlog = function searchBlog() {
+    $scope.searchProfile = function searchProfile() {
             if ($scope.searchFor) {
-                $state.go('master.main.blog-search', { search: $scope.searchFor });
+                $state.go('master.main.profile-search', { search: $scope.searchFor });
             }
         };
 }])

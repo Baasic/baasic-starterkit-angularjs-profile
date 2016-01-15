@@ -1,4 +1,4 @@
-﻿angular.module('baasic.blog')
+﻿angular.module('baasic.profile')
     .directive('loader', [
         function loader() {
             'use strict';

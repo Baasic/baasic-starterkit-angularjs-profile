@@ -1,4 +1,4 @@
-﻿angular.module('baasic.blog')
+﻿angular.module('baasic.profile')
     .directive('pager', [
         function pager() {
             'use strict';

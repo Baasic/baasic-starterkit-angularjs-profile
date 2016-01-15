@@ -1,0 +1,24 @@
+<div id="profiles" ng-repeat="profile in profiles.item">
+    <ul>
+        <li>Display name: {{profile.displayName}}</li>
+        <li>First Name: {{profile.firstName}}</li>
+        <li>Last Name: {{profile.lastName}}</li>
+        <li>Member since: {{profile.dateCreated | date: 'mediumDate' }}</li>
+        <li ng-if="profile.address.length">{{profile.address}}</li>
+        <li ng-if="profile.address.length">{{profile.zipCode}}</li>
+        <li ng-if="profile.city.length">{{profile.city}}</li>
+        <li ng-if="profile.country.length">{{profile.country}}</li>
+        <li ng-if="profile.mobilePhone.length" >Mobile: {{profile.mobilePhone}}</li>
+        <li ng-if="profile.aboutMySelf.length">Bio: {{profile.aboutMySelf}}</li>
+        <li ng-if="profile.dob.length">Date of Birth: {{profile.dob | date: 'MMM d, y' }}</li>
+    </ul>
+    <a ui-sref="master.profile-detail({profileId : profile.id})">View Profile</a>
+    <hr>
+</div>
+
+
+<pager pager-data="profiles.pagerData" ng-show="profiles.pagerData.hasPrevious || profiles.pagerData.hasNext" class="pager">
+    <hr>
+    <a ui-sref="master.main.index({ page: profiles.pagerData.currentPage - 1})" class="btn btn--light btn--med rounded" ng-show="profiles.pagerData.hasPrevious">Prev</a>
+    <a ui-sref="master.main.index({ page: profiles.pagerData.currentPage + 1})" class="btn btn--light btn--med rounded" ng-show="profiles.pagerData.hasNext">Next</a>
+</pager>

@@ -25,7 +25,7 @@ var htmlminOpts = {
 };
 
 var baseUrl = g.util.env.baseUrl || '/';
-var theme = g.util.env.theme || 'space-thumbnail';
+var theme = g.util.env.theme || 'default';
 
 //Plugins
 var atImport = require('postcss-import');
@@ -43,7 +43,7 @@ gulp.task('styles', ['clean-tmp'], function () {
         }),
         customMedia,
         customProperties,
-        calc,        
+        calc,
         colorFunction,
         autoprefixer({
             browsers: ['last 2 versions']
@@ -52,7 +52,7 @@ gulp.task('styles', ['clean-tmp'], function () {
 
     return gulp.src(
         './src/themes/' + theme + '/src/app.css')
-        .pipe(postcss(processors))        
+        .pipe(postcss(processors))
         .pipe(gulp.dest('./.tmp/'))
         .pipe(g.cached('built-css'))
         .pipe(livereload());
@@ -65,7 +65,7 @@ gulp.task('styles-dist', function () {
         }),
         customMedia,
         customProperties,
-        calc,        
+        calc,
         colorFunction,
         autoprefixer({
             browsers: ['last 2 versions']
@@ -292,7 +292,7 @@ function buildTemplates() {
     return lazypipe()
         .pipe(g.ngHtml2js, {
             declareModule: false,
-            moduleName: 'myBlog',
+            moduleName: 'profile',
             prefix: 'templates/'
         })
         .pipe(g.concat, bower.name + '-templates.js')

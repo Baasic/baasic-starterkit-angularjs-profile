@@ -1,4 +1,4 @@
-angular.module('myBlog').provider('baasicAppConfig', function () {
+angular.module('profile').provider('baasicAppConfig', function () {
     'use strict';
     this.config = {
         apiKey: '<apiKey>',
