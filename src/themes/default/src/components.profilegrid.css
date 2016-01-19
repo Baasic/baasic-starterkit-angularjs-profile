@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    # components.profilegrid
+\*------------------------------------*/
+
+.profile-grid {
+    
+}
+
+.profile-grid__item {
+    width: 47.5%;
+    float: left;
+}
+
+.profile-grid__item:nth-child(2) {
+    margin-left: 5%;
+}
