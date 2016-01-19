@@ -1,4 +1,4 @@
-angular.module('baasic.profile')
+angular.module('profile')
     .service('baasicProfileService', ['baasicApiHttp', 'baasicUserProfileService',
            function baasicProfileService(baasicApiHttp, baasicUserProfileService) {
             'use strict';

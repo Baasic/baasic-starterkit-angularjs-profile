@@ -8,8 +8,11 @@ angular.module('profile')
                 scope: '=',
                 controller: ['$scope', '$state', '$stateParams', '$q', 'baasicUserProfileService',
                     function ($scope, $state, $stateParams, $q, baasicUserProfileService) {
+
                         function loadProfiles() {
-                        baasicUserProfileService.find({
+                            $scope.$root.loader.suspend();
+
+                            baasicUserProfileService.find({
                             page: $state.params.page || 1,
                             rpp: 10
                         })
@@ -30,10 +33,14 @@ angular.module('profile')
                                 console.log(error); //jshint ignore: line
                             })
                             .finally(function () {
+                                $scope.$root.loader.resume();
                             });
+
+
                         }
 
                         loadProfiles();
+
                     }
                 ],
                 templateUrl: 'templates/profile/template-profile-list.html'
