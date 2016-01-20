@@ -2,11 +2,17 @@
     <section class="profile profile-grid__item" ng-repeat="profile in profiles.item">
         <div class="profile__content">
             <div class="profile__avatar"><img src="assets/img/avatar1.jpg" alt="{{profile.firstName}} {{profile.lastName}}"></div>
-            <div class="profile__firstname">{{profile.firstName}}</div>
-            <div class="profile__lastname">{{profile.lastName}}</div>
-            <div class="profile__country" ng-if="profile.country.length">{{profile.country}}</div>
-            <div class="profile__description" ng-if="profile.aboutMySelf.length">{{profile.aboutMySelf}}</div>
-            <div class="profile__social"></div>
+            <div class="profile__data">
+                <div class="profile__firstname">{{profile.firstName}}</div>
+                <div class="profile__lastname">{{profile.lastName}}</div>
+                <div class="profile__country" ng-if="profile.country.length">{{profile.country}}</div>
+                <div class="profile__description" ng-if="profile.aboutMySelf.length">{{profile.aboutMySelf}}</div>
+            </div>
+            <div class="profile__social">
+                <a href="#" class="profile__social__link"><img src="assets/img/social-facebook.svg" alt="Facebook profile"></a>
+                <a href="#" class="profile__social__link"><img src="assets/img/social-twitter.svg" alt="Twitter profile"></a>
+                <a href="#" class="profile__social__link"><img src="assets/img/social-linkedin.svg" alt="Linkedin profile"></a>
+            </div>
         </div>
         <span class="profile__label">Profile card &mdash;</span>
         <!-- <ul>
