@@ -1,77 +1,41 @@
 /*------------------------------------*\
-    # components.profilelist
+    # components.profile
 \*------------------------------------*/
 
 .profile {
     position: relative;
     margin: 2rem 0;
-    background-color: var(--color-primary);
+    background: var(--color-primary);
+    background: linear-gradient(to bottom,  #3e64ff 34%,#375ae9 100%);
     box-shadow: 0px 2px 15px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow .2s;
 }
-
+@media all and (--from-large) {
+    .profile {
+        width: 47.5%;
+        float: left;
+        clear: left;
+    }
+    .profile:nth-child(2n) {
+        margin-left: 5%;
+        margin-top: -1rem;
+        clear: none;
+    }
+}
+@media all and (--from-custlarge) {
+    .profile {
+        height: 420px;
+    }
+}
 .profile:hover {
     box-shadow: 0px 2px 35px 14px rgba(0, 0, 0, 0.2);
 }
-
 .profile__content {
     overflow: hidden;
+    padding: 1.5rem 2rem;
 }
-
-.profile__avatar {
-    display: inline-block;
-    overflow: hidden;
-    border-radius: var(--global-rounded);
-    margin-bottom: 1rem;
-}
-
-.profile__data {
-
-}
-
-.profile__firstname,
-.profile__lastname {
-    font-family: var(--ff-serif);
-    font-weight: var(--type-bold);
-    color: white;
-}
-
-.profile__firstname {
-    padding-right: .4rem;
-}
-
-.profile__lastname:after {
-    content: " \2014";
-    font-weight: var(--type-regular);
-}
-
-.profile__country {
-    padding: 1.5rem 0;
-    font-size: var(--type-tiny);
-    text-transform: uppercase;
-    letter-spacing: .15rem;
-    color: white;
-}
-
-.profile__description {
-    font-family: var(--ff-alt);
-    font-size: var(--type-small);
-}
-
-.profile__social {
-    margin-top: 2rem;
-}
-
-.profile__social__link {
-    padding: 0 .25rem;
-}
-
-.profile__label {
-    position: absolute;
-    left: -1.5rem;
-    bottom: 4rem;
-    font-size: var(--type-tiny);
-    text-transform: uppercase;
-    transform: rotate(-90deg);
-    opacity: .25;
+@media all and (--from-mediumsmall) {
+    .profile__content {
+        padding: 3rem 4rem;
+    }
 }

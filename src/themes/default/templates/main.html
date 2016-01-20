@@ -1,9 +1,20 @@
 ﻿<div class="container">
-    <header class="header">
-        <h1 class="header__title">Profile showcase.</h1>
-        <h2 class="header__subtitle">&mdash; Baasic profile feature</h2>
+    <header class="header grid">
+        <div class="col col--half">
+            <h1 class="header__title">Profile showcase.</h1>
+            <h2 class="header__subtitle">&mdash; Baasic profile feature</h2>
+        </div>
+        <div class="col col--half">
+            <form class="search" novalidate ng-submit="searchBlog()">
+                <input class="input--search" placeholder="Search..." type="search" />
+                <button type="submit" class="btn--search"></button>
+            </form>
+        </div>
     </header>
 
-    <main ui-view>
-    </main>
+    <main ui-view></main>
+
+    <footer class="footer">
+        Baasic profile kit. Copyright 2016, all rights reserved.
+    </footer>
 </div>

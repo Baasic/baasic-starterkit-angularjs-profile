@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    # components.profilesocial
+\*------------------------------------*/
+
+.profile__social {
+    margin-top: 1rem;
+}
+@media all and (--from-mediumsmall) {
+    .profile__social {
+        position: absolute;
+        bottom: 2rem;
+        left: 5rem;
+    }
+}
+@media all and (--from-large) {
+    .profile__social {
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+}
+@media all and (--from-custlarge) {
+    .profile__social {
+        position: absolute;
+        bottom: 2rem;
+        left: 5rem;
+    }
+}
+.profile__social__link {
+    padding: 0 .25rem;
+    opacity: .5;
+    transition: opacity .2s;
+}
+.profile__social__link:hover {
+    opacity: 1;
+}

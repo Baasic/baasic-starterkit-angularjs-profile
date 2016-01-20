@@ -19,8 +19,9 @@
     --type-base: 1rem;
     --type-medium: 1.25rem;
     --type-large: 1.563rem;
-    --type-xlarge: 1.953rem;
-    --type-xxlarge: 2.441rem;
+    /*--type-xlarge: 1.953rem;*/
+    --type-xlarge: 2.441rem;
+    --type-xxlarge: 3.441rem;
     --type-xxxlarge: 4.41rem;
 
     /* Type families */

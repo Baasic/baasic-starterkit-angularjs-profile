@@ -6,7 +6,7 @@
     display: inline-block;
     width: 100%;
     cursor: pointer;
-    border: 1px solid var(--color-ultralight);
+    border: 1px solid var(--color-mediumgray);
     background: white;
     transition: all .2s;
     padding: 1rem;
@@ -28,11 +28,11 @@
 }
 .input--text {
     line-height: 1.5rem;
-    border-bottom: 1px solid var(--color-ultralight);
+    border-bottom: 1px solid var(--color-mediumgray);
 }
 .input--textarea {
     min-height: 9rem;
-    border-bottom: 1px solid var(--color-ultralight);
+    border-bottom: 1px solid var(--color-mediumgray);
 }
 .input--search {
     display: inline-block;
@@ -41,7 +41,7 @@
     border: 0;
     background: transparent;
     transition: all .2s;
-    padding: 0 2rem 1rem 0;
+    padding: 0 2rem .25rem 0;
     line-height: 1.5rem;
     overflow: hidden;
     appearance: none !important;
@@ -53,14 +53,22 @@
     outline: 0;
     border-color: var(--color-light);
 }
+.input--search::placeholder {
+    color: var(--color-mediumgray);
+    transition: all .2s;
+}
+.input--search:hover::placeholder,
+.input--search:focus::placeholder {
+    color: var(--color-light);
+}
 @media all and (--from-large) {
     .input--search {
         margin-bottom: 1rem;
-        border-bottom: 1px solid var(--color-ultralight);
+        border-bottom: 1px solid var(--color-mediumgray);
     }
 }
 .input--search:focus {
-    padding: 0rem 2rem 1rem 1rem;
+    padding: 0rem 2rem .25rem 1rem;
     transition: all .2s;
 }
 .input--check {
