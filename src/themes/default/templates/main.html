@@ -5,9 +5,9 @@
             <h2 class="header__subtitle">&mdash; Baasic profile feature</h2>
         </div>
         <div class="col col--half">
-            <form class="search">
+            <form class="search" ng-controller="SearchCtrl" ng-submit="searchProfile()">
                 <input class="input--search" placeholder="Search..." type="search" ng-model="searchFor" />
-                <!--button type="submit" class="btn--search"></button-->
+                <button type="submit" class="btn--search" ng-click="searchProfile()"></button>
             </form>
         </div>
     </header>

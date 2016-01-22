@@ -14,7 +14,8 @@ angular.module('profile')
 
                             baasicUserProfileService.find({
                             page: $state.params.page || 1,
-                            rpp: 10
+                            rpp: 10,
+                            search: $state.params.search
                         })
                             .success(function profileList(profiles) {
                                 $scope.profiles = profiles;

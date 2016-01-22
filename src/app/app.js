@@ -54,7 +54,7 @@ angular.module('profile', [
                 controller: 'MainCtrl'
             })
             .state('master.main.index', {
-                url: '?{page}',
+                url: '?{page,search}',
                 templateUrl: 'templates/profile/profile-list.html'
             })
             .state('login', {
@@ -109,22 +109,11 @@ angular.module('profile', [
         };
     }
 ])
-.controller('LoginCtrl', ['$scope', '$state',
-    function LoginCtrl($scope, $state) {
-        'use strict';
-
-        $scope.goHome = function goHome() {
-            $state.go('master.main.index');
-        };
-    }
-])
 .controller('SearchCtrl', ['$scope', '$state', function ($scope, $state) {
     'use strict';
 
     $scope.searchProfile = function searchProfile() {
-            if ($scope.searchFor) {
-                $state.go('master.main.profile-search', { search: $scope.searchFor });
-            }
+            $state.go('master.main.index', { search: $scope.searchFor, page: 1 });            
         };
 }])
 .run(['$rootScope', '$window', 'baasicAuthorizationService',
