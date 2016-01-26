@@ -113,7 +113,7 @@ angular.module('profile', [
     'use strict';
 
     $scope.searchProfile = function searchProfile() {
-            $state.go('master.main.index', { search: $scope.searchFor, page: 1 });            
+            $state.go('master.main.index', { search: $scope.searchFor, page: 1 });
         };
 }])
 .run(['$rootScope', '$window', 'baasicAuthorizationService',
