@@ -12,6 +12,7 @@ body {
     background: var(--color-bodybg);
     color: var(--color-ultralight);
     position: relative;
+    overflow-x: hidden;
 }
 img, object, iframe {
     vertical-align: middle;
