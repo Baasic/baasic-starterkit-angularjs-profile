@@ -109,8 +109,10 @@ angular.module('profile', [
         };
     }
 ])
-.controller('SearchCtrl', ['$scope', '$state', function ($scope, $state) {
+.controller('SearchCtrl', ['$scope', '$state', '$stateParams', function ($scope, $state, $stateParams) {
     'use strict';
+    
+    $scope.searchFor = $stateParams.search || '';
 
     $scope.searchProfile = function searchProfile() {
             $state.go('master.main.index', { search: $scope.searchFor, page: 1 });            
