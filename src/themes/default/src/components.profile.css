@@ -39,3 +39,8 @@
         padding: 3rem 4rem;
     }
 }
+.no-profile {
+    font-size: var(--type-xlarge);
+    padding: 3rem 0 8rem 0;
+    text-align: center;
+}

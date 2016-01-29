@@ -115,7 +115,7 @@ angular.module('profile', [
     $scope.searchFor = $stateParams.search || '';
 
     $scope.searchProfile = function searchProfile() {
-            $state.go('master.main.index', { search: $scope.searchFor, page: 1 });            
+            $state.go('master.main.index', { search: $scope.searchFor, page: 1 });
         };
 }])
 .run(['$rootScope', '$window', 'baasicAuthorizationService',
