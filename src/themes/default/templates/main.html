@@ -8,6 +8,7 @@
             <form class="search" ng-controller="SearchCtrl" ng-submit="searchProfile()">
                 <input class="input--search" placeholder="Search..." type="search" ng-model="searchFor" />
                 <button type="submit" class="btn--search"></button>
+                <button ng-if="searchFor.length" ng-click="resetSearch()">X</button>
             </form>
         </div>
     </header>

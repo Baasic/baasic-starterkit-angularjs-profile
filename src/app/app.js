@@ -111,12 +111,16 @@ angular.module('profile', [
 ])
 .controller('SearchCtrl', ['$scope', '$state', '$stateParams', function ($scope, $state, $stateParams) {
     'use strict';
-    
+
     $scope.searchFor = $stateParams.search || '';
 
     $scope.searchProfile = function searchProfile() {
-            $state.go('master.main.index', { search: $scope.searchFor, page: 1 });
-        };
+        $state.go('master.main.index', { search: $scope.searchFor, page: 1 });
+    };
+    $scope.resetSearch = function resetSearch() {
+        $scope.searchFor = '';
+        $state.go('master.main.index', { search: $scope.searchFor, page: 1});
+    };
 }])
 .run(['$rootScope', '$window', 'baasicAuthorizationService',
     function moduleRun($rootScope, $window, baasicAuthService) {
