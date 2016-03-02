@@ -12,7 +12,7 @@ More information about the Starter Kit can be found in the series of blog posts 
 
 ## Working with the Starter kit
 
-As a client-side prerequisite, you should install the basic tools for your operating system: Node.js (4.x and above), Bower and Gulp. Start by cloning the [AngularJS profile Starter Kit repository](https://github.com/Baasic/baasic-starterkit-angularjs-profile/). After that, go into the root folder of the started Kit you just cloned and type
+As a client-side prerequisite, you should install the basic tools for your operating system: Node.js (4.x and above), Bower and Gulp. Start by cloning the [AngularJS Profile Starter Kit repository](https://github.com/Baasic/baasic-starterkit-angularjs-profile/). After that, go into the root folder of the started Kit you just cloned and type
 
     npm install
 
@@ -22,7 +22,7 @@ npm (Node Package Manager) will go through its configuration file (package.json)
 
 this will serve you the default theme, to serve a different theme please use the _--theme_ switch
 
-    gulp serve --theme profiles-minimal
+    gulp serve --theme default
 
 and you are *almost* ready to go.
 
@@ -45,7 +45,7 @@ gulp dist
 ```
 or
 ```bash
-gulp dist --theme gastro-thumbnail
+gulp dist --theme default
 ```
 
 ## Base url option
@@ -53,7 +53,7 @@ gulp dist --theme gastro-thumbnail
 You can also add a `--baseUrl` command if your blog destination is not in root of your website
 
 For example:
-`--baseUrl "/angularjs/starterkit-blog-themes/events-minimal/"`
+`--baseUrl "/angularjs/starterkit-profile-showcase/"`
 
 Now there's a `./dist` folder with all scripts and stylesheets concatenated and minified, also third party libraries installed with bower will be concatenated and minified into `vendors.min.js` and `vendors.min.css` respectively.
 
