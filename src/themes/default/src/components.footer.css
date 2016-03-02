@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    # components.footer
+\*------------------------------------*/
+
+.footer {
+    margin: 2rem 0 3rem 0;
+    font-family: var(--ff-sans);
+    font-size: var(--type-tiny);
+    color: var(--color-nightrider);
+}

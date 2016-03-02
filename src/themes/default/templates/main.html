@@ -1,16 +1,32 @@
-﻿<header>
-    <div ng-if="$root.user.isAuthenticated">
-        <div>Welcome, {{ $root.user.displayName }}</div>
-        <button type="button" ng-click="newBlogPost()">New post</button>
-        <baasic-logout on-logout="setEmptyUser()">
-            <button type="button" ng-click="logout()">Logout</button>
-        </baasic-logout>
+﻿<div class="message" ng-class="{'close': messageClosed}">
+    <div class="message__container">
+        <a href="http://baasic.com" class="message__icon--primary">
+        </a>
+        <a href="https://github.com/Baasic/baasic-starterkit-angularjs-blog">
+            <p class="message__title">Grab a Starter Kit and start building!</p>
+        </a>
     </div>
-    <div ng-if="!$root.user.isAuthenticated">To create new blog please <a ui-sref="login">login</a> or <a ui-sref="master.register">register</a></div>
-</header>
+    <a href="javascript:void(0)" ng-click="messageClosed=!messageClosed" ng-class="{'nShow': messageClosed}"><span class="message__icon--secondary">Close</span></a>
+</div>
 
-<h1>My New Blog</h1>
+<div class="container">
+    <header class="header grid">
+        <div class="col col--half">
+            <h1 class="header__title">Profile showcase.</h1>
+            <h2 class="header__subtitle">&mdash; Baasic profile feature</h2>
+        </div>
+        <div class="col col--half">
+            <form class="search" ng-controller="SearchCtrl" ng-submit="searchProfile()">
+                <input class="input--search" placeholder="Search..." type="search" ng-model="searchFor" />
+                <button type="submit" class="btn--search"></button>
+                <button ng-if="searchFor.length" ng-click="resetSearch()" class="input--clear">Clear</button>
+            </form>
+        </div>
+    </header>
 
-<main ui-view>
-        
-</main>
+    <main ui-view></main>
+
+    <footer class="footer">
+        Baasic profile kit. Copyright 2016, all rights reserved.
+    </footer>
+</div>

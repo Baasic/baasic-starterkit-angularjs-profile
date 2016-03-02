@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    # components.profilelabel
+\*------------------------------------*/
+
+.profile__label {
+    display: none;
+    position: absolute;
+    left: -1.5rem;
+    bottom: 4rem;
+    font-size: var(--type-tiny);
+    text-transform: uppercase;
+    opacity: .25;
+    transform: rotate(-90deg);
+}
+@media all and (--from-mediumsmall) {
+    .profile__label {
+        display: block;
+    }
+}

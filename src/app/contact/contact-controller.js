@@ -1,4 +1,4 @@
-﻿angular.module('myBlog')
+﻿angular.module('profile')
     .controller('ContactCtrl', ['$scope', '$state', 'contactService',
         function ContactCtrl($scope, $state, contactService) {
             'use strict';

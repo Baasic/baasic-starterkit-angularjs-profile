@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    # components.profileavatar
+\*------------------------------------*/
+
+.profile__avatar {
+    display: inline-block;
+    margin-bottom: 1rem;
+    max-width: 7em;
+    overflow: hidden;
+    border-radius: var(--global-rounded);
+}
+@media all and (--from-mediumsmall) {
+    .profile__avatar {
+        width: 25%;
+        float: left;
+        max-width: 9em;
+    }
+}
+@media all and (--from-large) {
+    .profile__avatar {
+        width: 25%;
+        float: none;
+    }
+}
+@media all and (--from-custlarge) {
+    .profile__avatar {
+        width: 25%;
+        float: left;
+    }
+}

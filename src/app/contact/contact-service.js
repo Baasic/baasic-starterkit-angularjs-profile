@@ -1,4 +1,4 @@
-﻿angular.module('myBlog')
+﻿angular.module('profile')
     .service('contactService', ['baasicApiHttp', 'baasicDynamicResourceService',
         function baasicBlogService(baasicApiHttp, dynamincService) {
             'use strict';
