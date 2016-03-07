@@ -1,5 +1,4 @@
 {
-    "apiRootUrl": "baasic.buildserver",
-    "apiVersion": "staging",
-    "apiKey": "pozdablogprofiletest"
+    "apiRootUrl": "api.baasic.com",
+    "apiVersion": "beta"
 }
