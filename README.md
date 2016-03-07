@@ -9,6 +9,10 @@ This Kit is based on the Baasic profile data type. Profiles provide a standard w
 
 More information about the Starter Kit can be found in the series of blog posts [here](http://www.baasic.com/posts/AngularJS-Blog-Starter-Kit-part-1/).
 
+## Starter Kit themes live demo
+
+### Profile showcase
+[Profile Showcase](http://demo.baasic.com/angularjs/starterkit-profile-showcase/)
 
 ## Working with the Starter kit
 
