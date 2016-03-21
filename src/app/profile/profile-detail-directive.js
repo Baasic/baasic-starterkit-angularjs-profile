@@ -11,7 +11,7 @@ angular.module('profile')
                         function loadProfile() {
                         baasicUserProfileService.get($state.params.profileId,
                         {
-
+                            embed: 'work,educations,skills,educations.organization,skills.skill,work.company,membership'
                         })
                             .success(function (data) {
                                 $scope.profile = data;

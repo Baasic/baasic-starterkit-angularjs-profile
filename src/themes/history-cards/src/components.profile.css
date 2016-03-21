@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    # components.profile
+\*------------------------------------*/
+
+.profile {
+    position: relative;
+    margin: 2rem 0;
+    background: var(--color-primary);
+    background: linear-gradient(to bottom,  #3e64ff 34%,#375ae9 100%);
+    box-shadow: 0px 2px 15px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .2s;
+}
+@media all and (--from-large) {
+    .profile {
+        width: 47.5%;
+        float: left;
+        clear: left;
+    }
+    .profile:nth-child(2n) {
+        margin-left: 5%;
+        margin-top: -1rem;
+        clear: none;
+    }
+}
+@media all and (--from-custlarge) {
+    .profile {
+        height: 420px;
+    }
+}
+.profile:hover {
+    box-shadow: 0px 2px 35px 14px rgba(0, 0, 0, 0.2);
+}
+.profile__content {
+    overflow: hidden;
+    padding: 1.5rem 2rem;
+}
+@media all and (--from-mediumsmall) {
+    .profile__content {
+        padding: 3rem 4rem;
+    }
+}
+.no-profile {
+    font-size: var(--type-xlarge);
+    padding: 3rem 0 8rem 0;
+    text-align: center;
+}

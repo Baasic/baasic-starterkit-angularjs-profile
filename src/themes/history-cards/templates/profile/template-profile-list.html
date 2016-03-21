@@ -1,0 +1,28 @@
+<div class="profile-list clearfix">
+    <section class="profile" ng-repeat="profile in profiles.item" ng-if="profiles.item.length">
+        <div class="profile__content">
+            <div class="profile__avatar"><img src="assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}"></div>
+            <div class="profile__data">
+                <a ui-sref="master.profile-detail({profileId : profile.id})">
+                <div class="profile__firstname">{{profile.firstName}}</div>
+                <div class="profile__lastname">{{profile.lastName}} <span class="profile__lastname__dash"> &mdash;</span></div></a>
+                <div class="profile__country" ng-if="profile.country.length">{{profile.country}}</div>
+                <div class="profile__description" ng-if="profile.aboutMySelf.length">{{profile.aboutMySelf}}</div>
+            <div class="profile__since">Member since: {{profile.dateCreated | date: 'mediumDate' }}</div>
+            </div>
+            <social-profile soc-id="profile.socid"></social-profile>
+        </div>
+        <span class="profile__label">Profile card &mdash;</span>
+    </section>
+
+    <section class="no-profile" ng-if="!profiles.item.length">
+        No profiles found!
+    </section>
+
+</div>
+
+<pager pager-data="profiles.pagerData" ng-show="profiles.pagerData.hasPrevious || profiles.pagerData.hasNext" class="pager">
+    <hr>
+    <a ui-sref="master.main.index({ page: profiles.pagerData.currentPage - 1})" class="btn --light --med" ng-show="profiles.pagerData.hasPrevious">Prev</a>
+    <a ui-sref="master.main.index({ page: profiles.pagerData.currentPage + 1})" class="btn --light --med" ng-show="profiles.pagerData.hasNext">Next</a>
+</pager>

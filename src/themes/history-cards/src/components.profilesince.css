@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    # components.profilesince
+\*------------------------------------*/
+
+.profile__since {
+    margin-top: 1rem;
+    font-size: var(--type-tiny);
+    opacity: .5;
+}
+@media all and (--from-large) {
+    .profile__since {
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+}
+@media all and (--from-custlarge) {
+    .profile__since {
+        position: absolute;
+        bottom: 1.65rem;
+        left: 42%;
+    }
+}
