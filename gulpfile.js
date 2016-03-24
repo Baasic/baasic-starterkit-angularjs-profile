@@ -25,7 +25,7 @@ var htmlminOpts = {
 };
 
 var baseUrl = g.util.env.baseUrl || '/';
-var theme = g.util.env.theme || 'minimal-profile';
+var theme = g.util.env.theme || 'full-profile';
 
 //Plugins
 var atImport = require('postcss-import');
