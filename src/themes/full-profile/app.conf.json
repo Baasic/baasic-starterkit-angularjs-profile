@@ -1,3 +1,5 @@
 {
+	"apiRootUrl": "baasic.buildserver",
+    "apiVersion": "staging",
     "apiKey": "starterkit-full-profile"
 }
