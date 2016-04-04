@@ -30,32 +30,29 @@
                         <hr>
                         <section class="overlay__section">
                             <span class="overlay__section__title">Education</span>
-                            <ul ng-repeat="edu in profile.educations">
-                                <li>degree: {{edu.degree}}</li>
-                                <li>grade: {{edu.grade}}</li>
-                                <li>started: {{edu.startDate | date:'dd-MM-yyyy'}}</li>
-                                <li>ended: {{edu.endDate | date:'dd-MM-yyyy'}}</li>
-                                <li>organization: {{edu.organizationName}}</li>
-                                <li>summary: {{edu.summary}}</li>
+                            <ul class="list" ng-repeat="edu in profile.educations">
+                                <li class="list__item"><span class="list__label">Degree</span><span class="list__value">{{edu.degree}}</span></li>
+                                <li class="list__item"><span class="list__label">Grade</span><span class="list__value">{{edu.grade}}</span></li>
+                                <li class="list__item"><span class="list__label">Started</span><span class="list__value">{{edu.startDate | date:'dd-MM-yyyy'}}</span></li>
+                                <li class="list__item"><span class="list__label">Ended</span><span class="list__value">{{edu.endDate | date:'dd-MM-yyyy'}}</span></li>
+                                <li class="list__item"><span class="list__label">Organization</span><span class="list__value">{{edu.organizationName}}</span></li>
+                                <li class="list__item"><span class="list__label">Summary</span><p class="list__value"><span class="list__paragraph">{{edu.summary}}</span></p></li>
                             </ul>
-                            <hr>
+                        </section>
+                        <section class="overlay__section">
+                            <span class="overlay__section__title">Skills</span>
+                            <ul class="skill__list">
+                                <li ng-repeat="skill in profile.skills" class="skill__item">{{skill.skillName}}</li>
+                            </ul>
                         </section>
                         <div class="overlay__section">
-                            Skills
-                            <ul>
-                                <li ng-repeat="skill in profile.skills">{{skill.skillName}}</li>
+                            <span class="overlay__section__title">Work</span>
+                            <ul class="list" ng-repeat="work in profile.work">
+                                <li class="list__item"><span class="list__label">Company</span><span class="list__value">{{work.companyName}}</span></li>
+                                <li class="list__item"><span class="list__label">Started</span><span class="list__value">{{work.startDate | date:'dd-MM-yyyy'}}</span></li>
+                                <li class="list__item"><span class="list__label">Ended</span><span class="list__value">{{work.endDate | date:'dd-MM-yyyy'}} <span ng-if="!work.endDate.lenght"> Still working there </span></span></li>
+                                <li class="list__item"><span class="list__label">Summary</span><p class="list__value"><span class="list__paragraph">{{work.summary}}</span></p></li>
                             </ul>
-                            <hr>
-                        </div>
-                        <div class="overlay__section">
-                            Work
-                            <ul ng-repeat="work in profile.work">
-                                <li>company: {{work.companyName}}</li>
-                                <li>started: {{work.startDate | date:'dd-MM-yyyy'}}</li>
-                                <li>ended: {{work.endDate | date:'dd-MM-yyyy'}} <span ng-if="!work.endDate.lenght"> Still working there </span></li>
-                                <li>summary: {{work.summary}}</li>
-                            </ul>
-                            <hr>
                         </div>
                     <!-- <div class="overlay__since">Member since: {{profile.dateCreated | date: 'mediumDate' }}</div>
                     </div> -->
