@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    # components.overlaydata
+\*------------------------------------*/
+
+@media all and (--from-mediumsmall) {
+    .overlay__data {
+        width: 80%;
+        margin-left: 5%;
+        float: right;
+    }
+}
+@media all and (--from-custlarge) {
+    .overlay__data {
+        width: calc(100% - 200px);
+        margin-left: 50px;
+        float: right;
+    }
+}
+.overlay__firstname,
+.overlay__lastname {
+    display: inline-block;
+    font-family: var(--ff-serif);
+    font-size: var(--type-large);
+    font-weight: var(--type-bold);
+    line-height: calc(var(--base-line-height)*1.5);
+    color: white;
+}
+@media all and (--from-mediumsmall) {
+    .overlay__firstname,
+    .overlay__lastname {
+        font-size: var(--type-xxlarge);
+        line-height: calc(var(--base-line-height)*2.5);
+        display: block;
+    }
+}
+.overlay__country {
+    padding: 1.5rem 0;
+    font-size: var(--type-tiny);
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    color: white;
+}
+.overlay__description {
+    font-family: var(--ff-serif);
+    font-size: var(--type-xlarge);
+    font-style: italic;
+    line-height: calc(var(--base-line-height)*2.25);
+    max-width: 26em;
+}
+.overlay__section {
+
+}

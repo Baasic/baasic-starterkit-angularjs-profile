@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    # components.overlay
+\*------------------------------------*/
+
+/*Added for overlay functionality*/
+body {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: var(--color-primary);
+    overflow-y: auto;
+    opacity: 0;
+    animation: open-overlay 400ms ease-out forwards 1s;
+}
+@keyframes open-overlay {
+    from {
+        opacity: 0;
+        margin-top: 2rem;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+.overlay__content {
+    overflow: hidden;
+    padding: 1.5rem 2rem;
+}

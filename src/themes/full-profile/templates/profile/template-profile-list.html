@@ -3,48 +3,76 @@
         <div class="profile__content">
             <div class="profile__avatar"><img src="assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}"></div>
             <div class="profile__data">
+
                 <div class="profile__firstname">{{profile.firstName}}</div>
                 <div class="profile__lastname">{{profile.lastName}} <span class="profile__lastname__dash"> &mdash;</span></div>
                 <div class="profile__country" ng-if="profile.country.length">{{profile.country}}</div>
                 <div class="profile__description" ng-if="profile.aboutMySelf.length">{{profile.aboutMySelf}}</div>
-                <div class="profile__description">
-                    Education
-                    <ul ng-repeat="edu in profile.educations">
-                        <li>degree: {{edu.degree}}</li>
-                        <li>grade: {{edu.grade}}</li>
-                        <li>started: {{edu.startDate | date:'dd-MM-yyyy'}}</li>
-                        <li>ended: {{edu.endDate | date:'dd-MM-yyyy'}}</li>
-                        <li>organization: {{edu.organizationName}}</li>
-                        <li>summary: {{edu.summary}}</li>
-                    </ul>
-                </div>
-                <div class="profile__description">
-                    Skills
-                    <ul>
-                        <li ng-repeat="skill in profile.skills">{{skill.skillName}}</li>
-                    </ul>
-                </div>
-                <div class="profile__description">
-                    Work
-                    <ul ng-repeat="work in profile.work">
-                        <li>company: {{work.companyName}}</li>
-                        <li>started: {{work.startDate | date:'dd-MM-yyyy'}}</li>
-                        <li>ended: {{work.endDate | date:'dd-MM-yyyy'}} <span ng-if="!work.endDate.lenght"> Still working there </span></li>
-                        <li>summary: {{work.summary}}</li>
-                    </ul>
-                </div>
-
             <div class="profile__since">Member since: {{profile.dateCreated | date: 'mediumDate' }}</div>
             </div>
             <social-profile soc-id="profile.socid"></social-profile>
         </div>
         <span class="profile__label">Profile card &mdash;</span>
+
+
+
+
+        <div class="overlay">
+            <div class="overlay__content">
+                    <div class="overlay__avatar">
+                        <img src="assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}">
+                    </div>
+                    <div class="overlay__data">
+                        <div class="overlay__firstname">{{profile.firstName}} </div>
+                        <div class="overlay__lastname">{{profile.lastName}} &mdash;</div>
+                        <div class="overlay__country" ng-if="profile.country.length">{{profile.country}}</div>
+                        <div class="overlay__description" ng-if="profile.aboutMySelf.length">{{profile.aboutMySelf}}</div>
+                        <hr>
+                        <section class="overlay__section">
+                            <span class="overlay__section__title">Education</span>
+                            <ul ng-repeat="edu in profile.educations">
+                                <li>degree: {{edu.degree}}</li>
+                                <li>grade: {{edu.grade}}</li>
+                                <li>started: {{edu.startDate | date:'dd-MM-yyyy'}}</li>
+                                <li>ended: {{edu.endDate | date:'dd-MM-yyyy'}}</li>
+                                <li>organization: {{edu.organizationName}}</li>
+                                <li>summary: {{edu.summary}}</li>
+                            </ul>
+                            <hr>
+                        </section>
+                        <div class="overlay__section">
+                            Skills
+                            <ul>
+                                <li ng-repeat="skill in profile.skills">{{skill.skillName}}</li>
+                            </ul>
+                            <hr>
+                        </div>
+                        <div class="overlay__section">
+                            Work
+                            <ul ng-repeat="work in profile.work">
+                                <li>company: {{work.companyName}}</li>
+                                <li>started: {{work.startDate | date:'dd-MM-yyyy'}}</li>
+                                <li>ended: {{work.endDate | date:'dd-MM-yyyy'}} <span ng-if="!work.endDate.lenght"> Still working there </span></li>
+                                <li>summary: {{work.summary}}</li>
+                            </ul>
+                            <hr>
+                        </div>
+                    <!-- <div class="overlay__since">Member since: {{profile.dateCreated | date: 'mediumDate' }}</div>
+                    </div> -->
+                    <!-- <social-profile soc-id="profile.socid"></social-profile> -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     </section>
 
     <section class="no-profile" ng-if="!profiles.item.length">
         No profiles found!
     </section>
-
 </div>
 
 <pager pager-data="profiles.pagerData" ng-show="profiles.pagerData.hasPrevious || profiles.pagerData.hasNext" class="pager">

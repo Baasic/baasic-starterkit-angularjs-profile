@@ -2,20 +2,20 @@
     # base.scrollbar
 \*------------------------------------*/
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: var(--color-mediumgray);
     height: 15px;
     box-shadow: none;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--color-bodybg);
     border: 5px solid transparent;
     border-radius: 15px;
     background-clip: content-box;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     height: 15px;
     width: 15px;
 }
