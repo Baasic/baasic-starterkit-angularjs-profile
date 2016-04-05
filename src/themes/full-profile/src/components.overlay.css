@@ -33,3 +33,18 @@ body {
     overflow: hidden;
     padding: 1.5rem 2rem;
 }
+.overlay__close {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: var(--type-xxlarge);
+    font-weight: var(--type-light);
+    background: none;
+    border: none;
+    opacity: .4;
+    transition: opacity .3s
+}
+.overlay__close:hover, .overlay__close:focus, .overlay__close:active {
+    opacity: 1;
+    outline: 0;
+}

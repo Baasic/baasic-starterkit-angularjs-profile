@@ -42,10 +42,17 @@
 }
 .overlay__description {
     font-family: var(--ff-serif);
-    font-size: var(--type-xlarge);
+    font-size: var(--type-large);
     font-style: italic;
-    line-height: calc(var(--base-line-height)*2.25);
+    line-height: calc(var(--base-line-height)*1.75);
     max-width: 26em;
+}
+@media all and (--from-custlarge) {
+    .overlay__description {
+        font-size: var(--type-xlarge);
+    	font-style: italic;
+    	line-height: calc(var(--base-line-height)*2.25);
+    }
 }
 .overlay__section {
     border-bottom: 1px solid color(black a(0.1));

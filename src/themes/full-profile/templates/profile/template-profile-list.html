@@ -19,44 +19,45 @@
 
         <div class="overlay">
             <div class="overlay__content">
-                    <div class="overlay__avatar">
-                        <img src="assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}">
+                <button class="overlay__close">x</button>
+                <div class="overlay__avatar">
+                    <img src="assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}">
+                </div>
+                <div class="overlay__data">
+                    <div class="overlay__firstname">{{profile.firstName}} </div>
+                    <div class="overlay__lastname">{{profile.lastName}} &mdash;</div>
+                    <div class="overlay__country" ng-if="profile.country.length">{{profile.country}}</div>
+                    <div class="overlay__description" ng-if="profile.aboutMySelf.length">{{profile.aboutMySelf}}</div>
+                    <hr>
+                    <section class="overlay__section">
+                        <span class="overlay__section__title">Education</span>
+                        <ul class="list" ng-repeat="edu in profile.educations">
+                            <li class="list__item"><span class="list__label">Degree</span><span class="list__value">{{edu.degree}}</span></li>
+                            <li class="list__item"><span class="list__label">Grade</span><span class="list__value">{{edu.grade}}</span></li>
+                            <li class="list__item"><span class="list__label">Started</span><span class="list__value">{{edu.startDate | date:'dd-MM-yyyy'}}</span></li>
+                            <li class="list__item"><span class="list__label">Ended</span><span class="list__value">{{edu.endDate | date:'dd-MM-yyyy'}}</span></li>
+                            <li class="list__item"><span class="list__label">Organization</span><span class="list__value">{{edu.organizationName}}</span></li>
+                            <li class="list__item"><span class="list__label">Summary</span><p class="list__value"><span class="list__paragraph">{{edu.summary}}</span></p></li>
+                        </ul>
+                    </section>
+                    <section class="overlay__section">
+                        <span class="overlay__section__title">Skills</span>
+                        <ul class="skill__list">
+                            <li ng-repeat="skill in profile.skills" class="skill__item">{{skill.skillName}}</li>
+                        </ul>
+                    </section>
+                    <div class="overlay__section">
+                        <span class="overlay__section__title">Work</span>
+                        <ul class="list" ng-repeat="work in profile.work">
+                            <li class="list__item"><span class="list__label">Company</span><span class="list__value">{{work.companyName}}</span></li>
+                            <li class="list__item"><span class="list__label">Started</span><span class="list__value">{{work.startDate | date:'dd-MM-yyyy'}}</span></li>
+                            <li class="list__item"><span class="list__label">Ended</span><span class="list__value">{{work.endDate | date:'dd-MM-yyyy'}} <span ng-if="!work.endDate.lenght"> Still working there </span></span></li>
+                            <li class="list__item"><span class="list__label">Summary</span><p class="list__value"><span class="list__paragraph">{{work.summary}}</span></p></li>
+                        </ul>
                     </div>
-                    <div class="overlay__data">
-                        <div class="overlay__firstname">{{profile.firstName}} </div>
-                        <div class="overlay__lastname">{{profile.lastName}} &mdash;</div>
-                        <div class="overlay__country" ng-if="profile.country.length">{{profile.country}}</div>
-                        <div class="overlay__description" ng-if="profile.aboutMySelf.length">{{profile.aboutMySelf}}</div>
-                        <hr>
-                        <section class="overlay__section">
-                            <span class="overlay__section__title">Education</span>
-                            <ul class="list" ng-repeat="edu in profile.educations">
-                                <li class="list__item"><span class="list__label">Degree</span><span class="list__value">{{edu.degree}}</span></li>
-                                <li class="list__item"><span class="list__label">Grade</span><span class="list__value">{{edu.grade}}</span></li>
-                                <li class="list__item"><span class="list__label">Started</span><span class="list__value">{{edu.startDate | date:'dd-MM-yyyy'}}</span></li>
-                                <li class="list__item"><span class="list__label">Ended</span><span class="list__value">{{edu.endDate | date:'dd-MM-yyyy'}}</span></li>
-                                <li class="list__item"><span class="list__label">Organization</span><span class="list__value">{{edu.organizationName}}</span></li>
-                                <li class="list__item"><span class="list__label">Summary</span><p class="list__value"><span class="list__paragraph">{{edu.summary}}</span></p></li>
-                            </ul>
-                        </section>
-                        <section class="overlay__section">
-                            <span class="overlay__section__title">Skills</span>
-                            <ul class="skill__list">
-                                <li ng-repeat="skill in profile.skills" class="skill__item">{{skill.skillName}}</li>
-                            </ul>
-                        </section>
-                        <div class="overlay__section">
-                            <span class="overlay__section__title">Work</span>
-                            <ul class="list" ng-repeat="work in profile.work">
-                                <li class="list__item"><span class="list__label">Company</span><span class="list__value">{{work.companyName}}</span></li>
-                                <li class="list__item"><span class="list__label">Started</span><span class="list__value">{{work.startDate | date:'dd-MM-yyyy'}}</span></li>
-                                <li class="list__item"><span class="list__label">Ended</span><span class="list__value">{{work.endDate | date:'dd-MM-yyyy'}} <span ng-if="!work.endDate.lenght"> Still working there </span></span></li>
-                                <li class="list__item"><span class="list__label">Summary</span><p class="list__value"><span class="list__paragraph">{{work.summary}}</span></p></li>
-                            </ul>
-                        </div>
-                    <!-- <div class="overlay__since">Member since: {{profile.dateCreated | date: 'mediumDate' }}</div>
-                    </div> -->
-                    <!-- <social-profile soc-id="profile.socid"></social-profile> -->
+                <!-- <div class="overlay__since">Member since: {{profile.dateCreated | date: 'mediumDate' }}</div>
+                </div> -->
+                <!-- <social-profile soc-id="profile.socid"></social-profile> -->
                 </div>
             </div>
         </div>
