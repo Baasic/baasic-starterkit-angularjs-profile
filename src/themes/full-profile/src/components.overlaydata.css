@@ -81,9 +81,6 @@
 	display: inline-block;
 	max-width: 40em;
 }
-.skill__list {
-
-}
 .skill__item {
 	display: inline-block;
 	margin-right: .75em;
@@ -91,5 +88,6 @@
 	font-size: var(--type-small);
 	color: var(--color-mediumgray);
 	background-color: white;
+	opacity: .8;
 	border-radius: 2px;
 }
