@@ -26,7 +26,7 @@
                 <div class="overlay__data">
                     <div class="overlay__firstname">{{profile.firstName}} </div>
                     <div class="overlay__lastname">{{profile.lastName}} &mdash;</div>
-                    <div class="overlay__country" ng-if="profile.country.length">{{profile.country}}</div>
+                    <div class="overlay__country" ng-if="profile.country.length">{{profile.country}} &middot; Member since {{profile.dateCreated | date: 'mediumDate' }}</div>
                     <div class="overlay__description" ng-if="profile.aboutMySelf.length">{{profile.aboutMySelf}}</div>
                     <hr>
                     <section class="overlay__section">
@@ -55,9 +55,7 @@
                             <li class="list__item"><span class="list__label">Summary</span><p class="list__value"><span class="list__paragraph">{{work.summary}}</span></p></li>
                         </ul>
                     </div>
-                <!-- <div class="overlay__since">Member since: {{profile.dateCreated | date: 'mediumDate' }}</div>
-                </div> -->
-                <!-- <social-profile soc-id="profile.socid"></social-profile> -->
+                    <!-- <social-profile soc-id="profile.socid"></social-profile> -->
                 </div>
             </div>
         </div>
