@@ -9,6 +9,7 @@
     background: linear-gradient(to bottom,  #3e64ff 34%,#375ae9 100%);
     box-shadow: 0px 2px 15px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow .2s;
+    cursor: pointer;
 }
 @media all and (--from-large) {
     .profile {

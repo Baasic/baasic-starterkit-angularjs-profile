@@ -41,11 +41,11 @@ body {
     }
 }
 .overlay__show {
-    animation: open-overlay 400ms ease-out forwards 1s;
+    animation: open-overlay 400ms ease-out forwards;
 }
 .overlay__hide {
 	opacity: 1;
-    animation: close-overlay 400ms ease-out forwards 1s;
+    animation: close-overlay 400ms ease-out forwards;
 }
 .overlay__content {
     overflow: hidden;
