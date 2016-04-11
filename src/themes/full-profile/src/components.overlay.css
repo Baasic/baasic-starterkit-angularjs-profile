@@ -19,22 +19,10 @@ body {
 }
 .overlay.ng-show {
     opacity: 1;
-
 }
 .overlay.ng-hide {
     opacity: 0;
     margin-top: 2rem;
-}
-@keyframes open-overlay {
-    from {
-        opacity: 0;
-        margin-top: 2rem;
-    }
-    to {
-        opacity: 1;
-        margin-top: 0;
-        z-index: 2;
-    }
 }
 .overlay__content {
     overflow: hidden;
