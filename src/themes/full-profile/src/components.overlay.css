@@ -6,7 +6,6 @@
 body {
     overflow: hidden;
 }
-
 .overlay {
     position: fixed;
     top: 0;
@@ -16,7 +15,15 @@ body {
     z-index: 10;
     background: var(--color-primary);
     overflow-y: auto;
+    transition: 400ms linear all;
+}
+.overlay.ng-show {
+    opacity: 1;
+
+}
+.overlay.ng-hide {
     opacity: 0;
+    margin-top: 2rem;
 }
 @keyframes open-overlay {
     from {
@@ -28,24 +35,6 @@ body {
         margin-top: 0;
         z-index: 2;
     }
-}
-@keyframes close-overlay {
-    from {
-        opacity: 1;
-        margin-top: 0;
-    }
-    to {
-        opacity: 0;
-        margin-top: 2rem;
-        z-index: -1;
-    }
-}
-.overlay__show {
-    animation: open-overlay 400ms ease-out forwards;
-}
-.overlay__hide {
-	opacity: 1;
-    animation: close-overlay 400ms ease-out forwards;
 }
 .overlay__content {
     overflow: hidden;
