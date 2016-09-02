@@ -76,6 +76,11 @@
     font-family: var(--ff-alt);
     font-size: var(--type-small);
 }
+.overlay__section .list--work:not(:last-child) {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px dashed color(black a(0.1));
+}
 .list__item {
     display: table;
     width: 100%;
