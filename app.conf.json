@@ -1,3 +1,5 @@
 {
-
+    "apiRootUrl": "api.baasic.com",
+    "apiVersion": "beta",
+    "apiKey": "starterkit-profile"
 }
