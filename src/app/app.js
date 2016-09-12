@@ -109,16 +109,14 @@ angular.module('profile', [
         };
 
         $scope.removeScroll = function removeScroll() {
-            var elem = angular.element(document.querySelector('.overlay'));
             var body = angular.element(document.querySelector('body'));
-
             body.addClass('no-scroll');
-        }
+        };
 
         $scope.addScroll = function addScroll() {
             var body = angular.element(document.querySelector('body'));
             body.removeClass('no-scroll');
-        }
+        };
     }
 ])
 .controller('SearchCtrl', ['$scope', '$state', '$stateParams', function ($scope, $state, $stateParams) {

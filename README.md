@@ -3,16 +3,12 @@ Baasic AngularJS Profile Starter Kit
 
 ## Starter Kit Functionality
 
-This Starter Kit provides a bare-bones profile list. Initially, it shows a list of profiles, with search and pagination. To keep things simple, it allows you to see all available profiles. We deliberately removed advanced features so the basic functionality is not obscured by them: however, future samples will include a complete profile management functionality.
+This Starter Kit provides a bare-bones profile list with some details about education, skills and work experience. Initially, it shows a list of profiles, with search and pagination. To keep things simple, it allows you to see all available profiles. We deliberately removed advanced features so the basic functionality is not obscured by them: however, future samples will include a complete profile management functionality.
 
 This Kit is based on the Baasic profile data type. Profiles provide a standard way to gather informations about users for the purpose of browsing, searching and connecting with people on your website, social network or application.
 
-More information about the Starter Kit can be found in the series of blog posts [here](http://www.baasic.com/posts/AngularJS-Blog-Starter-Kit-part-1/).
-
-## Starter Kit themes live demo
-
 ### Profile showcase
-[Profile Showcase](http://demo.baasic.com/angularjs/starterkit-profile-showcase/)
+[Profile Showcase](http://demo.baasic.com/angularjs/starterkit-full-profile-showcase/)
 
 ## Working with the Starter kit
 
