@@ -2,7 +2,7 @@
     <div class="profile" ng-repeat="profile in profiles.item" ng-if="profiles.item.length">
         <div class="profile__content__wrapper" ng-click="show = !show; removeScroll()">
             <div class="profile__content">
-                <div class="profile__avatar"><img src="assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}"></div>
+                <div class="profile__avatar"><img src="./assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}"></div>
                 <div class="profile__data">
                     <div class="profile__firstname">{{profile.firstName}}</div>
                     <div class="profile__lastname">{{profile.lastName}} <span class="profile__lastname__dash"> &mdash;</span></div>
@@ -17,7 +17,7 @@
             <div class="overlay__content">
                 <button class="overlay__close" ng-click="show = !show; addScroll()">x</button>
                 <div class="overlay__avatar">
-                    <img src="assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}">
+                    <img src="./assets/img/avatar.jpg" ng-src="{{profile.avatar}}" alt="{{profile.firstName}} {{profile.lastName}}">
                 </div>
                 <div class="overlay__data">
                     <div class="overlay__firstname">{{profile.firstName}} </div>
