@@ -26,7 +26,7 @@ this will serve you the default theme, to serve a different theme please use the
 
 and you are *almost* ready to go.
 
-In its default state, this Kit points to the [main demo site](http://demo.baasic.com/angularjs/starterkit-profile/) and pulls its content from it. As it would not be a nice thing to have thousands of users editing it, you will need to point your Kit to your own application. It is easy - just go to the root folder and find *app.conf.json* and enter your Baasic application unique identifier (API Key) here:
+In its default state, this Kit points to the [main demo site](http://demo.baasic.com/angularjs/starterkit-profile-showcase/) and pulls its content from it. As it would not be a nice thing to have thousands of users editing it, you will need to point your Kit to your own application. It is easy - just go to the root folder and find *app.conf.json* and enter your Baasic application unique identifier (API Key) here:
 
     {
         "apiRootUrl": "api.baasic.com",
